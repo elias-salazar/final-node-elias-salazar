@@ -5,9 +5,7 @@ const initModels = require("./models/initModels");
 const { userRoutes, authRoutes, productRoutes } = require("./routes");
 const transporter = require("./utils/mailer");
 const app = express();
-const PORT = process.env.PORT || 8000;
-require("dotenv").config();
-const swaggerDocs = require("../swagger");
+
 app.use(express.json());
 
 initModels();
@@ -31,9 +29,5 @@ app.use("/api/v1", authRoutes);
 app.use("/api/v1", productRoutes);
 
 app.use(handleError);
-app.listen(PORT, () => {
-  console.log(`servidor corriendo en el puerto ${PORT}`);
-  swaggerDocs(app, PORT);
-});
 
 module.exports = app;
