@@ -7,7 +7,7 @@
     "dev": "nodemon ./src/server.js",
     "start": "node ./src/server.js",
     "seed": "node ./src/seeders/seed.js",
-    "test": "jest  --detectOpenHandles --verbose"
+    "test": "jest  --silent --detectOpenHandles --verbose"
   },
   "keywords": [],
   "author": "",
@@ -17,8 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "jsonwebtoken": "^8.5.1",
-    "morgan": "^1.10.0",
+    "jest": "^29.3.1",
     "nodemailer": "^6.8.0",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
@@ -28,6 +27,9 @@
     "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0"
   }
 }

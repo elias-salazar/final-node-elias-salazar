@@ -24,7 +24,7 @@ const ProductInCart = db.define("productincart", {
     allowNull: false,
   },
   price: {
-    type: DataTypes.FLOAT,
+    type: DataTypes.REAL,
     allowNull: false,
   },
   status: {

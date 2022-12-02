@@ -15,9 +15,9 @@ const Cart = db.define("cart", {
     field: "user_id",
   },
   totalPrice: {
-    type: DataTypes.FLOAT,
+    type: DataTypes.REAL,
     allowNull: true,
-    defaultValue: 00,
+    defaultValue: 0,
     field: "total_price",
   },
 });

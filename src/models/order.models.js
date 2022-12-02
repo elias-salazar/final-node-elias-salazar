@@ -10,7 +10,7 @@ const Order = db.define("order", {
     autoIncrement: true,
   },
   totalPrice: {
-    type: DataTypes.FLOAT,
+    type: DataTypes.REAL,
     allowNull: false,
     field: "total_price",
   },

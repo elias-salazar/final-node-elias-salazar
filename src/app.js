@@ -20,9 +20,6 @@ db.sync({ force: false })
   .then(() => console.log("base de datos sincronizada"))
   .catch((error) => console.log(error));
 
-transporter
-  .verify() // devuelve una promesa
-  .then(() => console.log("listos para enviar correos"));
 app.get("/", (req, res) => {
   console.log("bienvenido al server");
 });

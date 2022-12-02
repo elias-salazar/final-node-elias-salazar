@@ -24,7 +24,7 @@ const ProductInOrder = db.define("productinorder", {
     allowNull: false,
   },
   price: {
-    type: DataTypes.FLOAT,
+    type: DataTypes.REAL,
     allowNull: false,
   },
   status: {
