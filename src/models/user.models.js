@@ -2,16 +2,16 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
-//* no pude hacer que funcione la documentacion, me salto error con los esquemas y cambie todo pero no lo pude hacer
+
 /**
  * @openapi
  * components:
  *   schemas:
- *     User:
+ *     user:
  *       type: object
  *       properties:
  *         id:
- *            type:integer
+ *            type: INTEGER
  *            example: 1
  *         username:
  *           type: string
@@ -19,6 +19,9 @@ const bcrypt = require("bcrypt");
  *         email:
  *           type: string
  *           example: robert@gmail.com
+ *         password:
+ *           type: string
+ *           example: 1234
  *     register:
  *       type: object
  *       properties:
@@ -31,11 +34,7 @@ const bcrypt = require("bcrypt");
  *         password:
  *           type: string
  *           example: 1234
- *   securitySchemes:
- *     bearerAuth:
- *       type: http
- *       scheme: bearer
- *       bearerFormat: JWT
+ 
  */
 const User = db.define(
   "user",

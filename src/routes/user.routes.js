@@ -14,15 +14,14 @@ const router = Router();
  * @openapi
  * /api/v1/users:
  *   post:
- *     summary: Register a new user into the app
- *     tags: [Register]
+ *     summary: "register a new user into the app"
+ *     tags: [User]
  *     requestBody:
- *       description: To register a new user you need a username, email and password
  *       required: true
  *       content:
- *         application/json:
- *           schema:
- *             $ref: "#/components/schemas/register"
+ *          application/json:
+ *            schemas:
+ *              $ref: "#/components/schemas/register"
  *     responses:
  *       201:
  *         description: created
@@ -37,8 +36,9 @@ const router = Router();
  *                 data:
  *                   type: array
  *                   items:
- *                     $ref: "#/components/schemas/User"
+ *                     $ref: "#/components/schemas/user"
  */
+
 router.post("/users", userRegister);
 router.get("/users", getAllUser);
 router.get("/users/:id/cart", authenticate, getAllProductsInCart);

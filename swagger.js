@@ -3,14 +3,28 @@ const swaggerUi = require("swagger-ui-express");
 
 const options = {
   definition: {
-    openapi: "3.0.0", // standar open Api que estamos usando
+    openapi: "3.0.0",
     info: {
       title: "api para un ecommerce",
       version: "1.0.0",
       description: "API que sirve para crear una aplicación de venta online.",
     },
   },
-  apis: ["./src/routes/user.routes.js", "./src/routes/product.routes.js"],
+  apis: [
+    "./src/routes/user.routes.js",
+    "./src/routes/productInCart.routes.js",
+    "./src/routes/cart.routes.js",
+    "./src/routes/productInOrder.routes.js",
+    "./src/routes/order.routes.js",
+    "./src/routes/product.routes.js",
+
+    "./src/routes/product.models.js",
+    "./src/routes/Order.models.js",
+    "./src/routes/cart.models.js",
+    "./src/routes/productInCart.models.js",
+    "./src/routes/productInOrder.models.js",
+    "./src/models/user.models.js",
+  ],
 };
 
 const swaggerSpec = swaggerJSDoc(options);
