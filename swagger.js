@@ -12,17 +12,11 @@ const options = {
   },
   apis: [
     "./src/routes/user.routes.js",
-    "./src/routes/productInCart.routes.js",
-    "./src/routes/cart.routes.js",
-    "./src/routes/productInOrder.routes.js",
     "./src/routes/order.routes.js",
     "./src/routes/product.routes.js",
 
     "./src/routes/product.models.js",
     "./src/routes/Order.models.js",
-    "./src/routes/cart.models.js",
-    "./src/routes/productInCart.models.js",
-    "./src/routes/productInOrder.models.js",
     "./src/models/user.models.js",
   ],
 };

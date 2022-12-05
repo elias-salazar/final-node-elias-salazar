@@ -10,8 +10,8 @@ const { DataTypes } = require("sequelize");
  *       type: object
  *       properties:
  *         id:
- *            type: INTEGER
- *            example: 1
+ *           type: integer
+ *           example: 1
  *         name:
  *           type: string
  *           example: phone

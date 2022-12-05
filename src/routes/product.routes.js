@@ -11,12 +11,6 @@ const {
  *   get:
  *     summary: "get all products"
  *     tags: [Products]
- *     requestBody:
- *       required: true
- *       content:
- *          application/json:
- *            schemas:
- *              $ref: "#/components/schemas/products"
  *     responses:
  *       200:
  *         description: ok
