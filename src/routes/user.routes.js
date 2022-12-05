@@ -37,6 +37,90 @@ const router = Router();
  *                   type: array
  *                   items:
  *                     $ref: "#/components/schemas/user"
+ * /api/v1/users/{id}/cart:
+ *   get:
+ *     security:
+ *       - bearerAuth: []
+ *     summary: Get all product in cart
+ *     tags: [cart]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           minimum: 1
+ *         description: user Id
+ *     responses:
+ *       200:
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: OK
+ *                 data:
+ *                   type: array
+ *                   items: {}
+ *   post:
+ *     security:
+ *       - bearerAuth: []
+ *     summary: buy cart
+ *     tags: [cart]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           minimum: 1
+ *         description: user Id
+ *     responses:
+ *       200:
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: OK
+ *                 data:
+ *                   type: array
+ *                   items: {}
+ * /api/v1/users/{id}/orders:
+ *   get:
+ *     security:
+ *       - bearerAuth: []
+ *     summary: Get all orders
+ *     tags: [cart]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           minimum: 1
+ *         description: user Id
+ *     responses:
+ *       200:
+ *         description: OK
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: OK
+ *                 data:
+ *                   type: array
+ *                   items: {}
+ *
  */
 
 router.post("/users", userRegister);

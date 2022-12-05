@@ -5,9 +5,37 @@ const {
   addProduct,
   addProductToCart,
 } = require("../controllers");
+/**
+ * @openapi
+ * /api/v1/products:
+ *   get:
+ *     summary: "get all products"
+ *     tags: [Products]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *          application/json:
+ *            schemas:
+ *              $ref: "#/components/schemas/products"
+ *     responses:
+ *       200:
+ *         description: ok
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 status:
+ *                   type: string
+ *                   example: OK
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: "#/components/schemas/products"
+ */
 
 const router = Router();
-router.post("/products/add", authenticate, addProductToCart);
+router.post("/products/:id/add", authenticate, addProductToCart);
 
 router.get("/products", getAllProducts);
 router.post("/products", authenticate, addProduct);

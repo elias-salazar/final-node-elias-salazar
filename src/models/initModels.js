@@ -29,7 +29,7 @@ const initModels = () => {
   Cart.hasMany(ProductInCart, { foreignKey: "cart_id" });
 
   //product-order
-  Product.belongsTo(ProductInOrder, { foreignKey: "product_id" });
+  Product.belongsTo(ProductInOrder, { foreignKey: "" });
   ProductInOrder.hasOne(Product, { foreignKey: "product_id" });
 
   //productinorder-order

@@ -36,9 +36,8 @@ const addProduct = async (req, res, next) => {
 
 const addProductToCart = async (req, res, next) => {
   try {
-    const bearerToken = req.headers.authorization;
-    const token = bearerToken.split("Bearer ")[1];
-    const { id } = jwt.verify(token, process.env.SECRET, "HS512");
+    const { id } = req.params;
+
     const data = {
       userId: id,
       quantity: req.body.quantity,

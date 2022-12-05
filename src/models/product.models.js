@@ -2,6 +2,32 @@
 const db = require("../utils/database");
 const { DataTypes } = require("sequelize");
 
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     products:
+ *       type: object
+ *       properties:
+ *         id:
+ *            type: INTEGER
+ *            example: 1
+ *         name:
+ *           type: string
+ *           example: phone
+ *         price:
+ *           type: real
+ *           example: 12
+ *         availableQty:
+ *           type: integer
+ *           example: 10
+ *         status:
+ *           type: boolean
+ *           example: false
+ *         userId:
+ *           type: integer
+ *           example: 1
+ */
 const Product = db.define("product", {
   id: {
     type: DataTypes.INTEGER,
